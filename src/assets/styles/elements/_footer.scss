@@ -1,0 +1,104 @@
+.footer {
+    margin-top: auto;
+    position: relative;
+    background-color: #f6f6f6;
+    // filter: blur(12px);
+    width: 100%;
+
+    &-bg {
+        &:nth-of-type(1),
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+            position: absolute;
+            width: 50%;
+            height: 25%;
+            border-radius: 99999px;
+            filter: blur(300px);
+            z-index: 0;
+            opacity: 0.75;
+        }
+
+        &:nth-of-type(1) {
+            background-color: #f7ae75;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        &:nth-of-type(2) {
+            background-color: #eb7a7d;
+            top: 50%;
+            left: 0%;
+            // transform: translate(-15%, 0%);
+        }
+
+        &:nth-of-type(3) {
+            background-color: #1b6578;
+            top: 50%;
+            right: -5%;
+        }
+    }
+
+    // @include bg-img(
+    //     $image: 'footer-img.svg',
+    //     $repeat: no-repeat,
+    //     $size: 507px 386px,
+    //     $color: $bg-grey,
+    //     $position: top left
+    // );
+
+    &-main {
+        padding: 100px 0 65px;
+    }
+
+    &-nav-item {
+        ul {
+            li {
+                a {
+                    font-family: $font-primary;
+                    font-weight: 500;
+                    font-size: 1rem;
+                    line-height: 1.75rem;
+                    color: $secondary;
+                }
+            }
+        }
+    }
+    &-bottom {
+        padding: 32px 0;
+        background: rgba($secondary, 0.1);
+        font-size: 0.9375rem;
+        font-weight: 500;
+        color: rgba($secondary, 0.6);
+    }
+
+    .copyright {
+        margin-left: 12px;
+        color: #00000080;
+    }
+
+    &-social-link {
+        background-color: $secondary;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.75rem;
+        display: flex;
+        padding: 0 10px;
+        align-items: center;
+        justify-content: center;
+
+        & > svg {
+            // max-height: 35px;
+        }
+    }
+}
+
+.pintrest-social-link {
+    transform: scale(1.2);
+    margin-bottom: -8px;
+}
+
+.facebook-social-link {
+    transform: scale(1.075);
+    margin-bottom: -7.5px;
+}

@@ -1,0 +1,137 @@
+// Colors
+@each $key,
+$val in $colors {
+    .color-#{$key} {
+        color: #{$val};
+    }
+}
+
+// Backgrounds
+@each $key,
+$val in $colors {
+    .bg-#{$key} {
+        background-color: #{$val};
+    }
+}
+
+// Font weights
+@each $key,
+$val in $font-weights {
+    .fw-#{$key} {
+        font-weight: #{$val};
+    }
+}
+
+// Text
+.ellipsis {
+    @include ellipsis(100%);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-no-transform {
+    text-transform: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+// Display
+.display-block {
+    display: block;
+}
+
+// Shapes
+.circle {
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.rounded {
+    border-radius: $br;
+    overflow: hidden;
+}
+
+// Positions
+.relative {
+    position: relative;
+}
+
+// Hovers
+.hover-opacity {
+    transition: 0.3s !important;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.hover-shadow {
+    &:hover {
+        box-shadow: 0 24px 60px rgba(#000, 0.2);
+    }
+}
+
+.hover-bg-secondary {
+    transition: 0.3s !important;
+
+    &:hover {
+        background-color: rgba($secondary, 0.1);
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+// Height
+.h-100 {
+    height: 100%;
+}
+
+// Width
+.w-100 {
+    width: 100%;
+}
+
+// Spaces
+.mb-2 {
+    margin-bottom: 8px !important;
+}
+
+.mb-5 {
+    margin-bottom: 20px !important;
+}
+
+.mt-5 {
+    margin-top: 20px !important;
+}
+
+.my-5 {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.text-white {
+    color: #fff;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}

@@ -1,0 +1,47 @@
+.list-with-link {
+    position: relative;
+
+    .list-link {
+        @include center(vertical);
+        right: -70px;
+        z-index: 10;
+        // background: $primary;
+        color: #fff;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background: $primary-dark;
+        }
+
+        &::before {
+            display: none;
+        }
+
+        &.slick-next {
+            right: -80px;
+        }
+
+        &.slick-prev {
+            left: -80px;
+        }
+
+        svg {
+            font-size: 56px;
+        }
+    }
+
+    .MuiGrid-item.slide-container {
+        padding-left: 0;
+        padding-right: 0;
+
+        .slick-track {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
